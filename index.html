@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Johan Khanye and Bootstrap contributors">
+    <title>Johan Khanye · Summary </title>
+    <link href="./bootstrap/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+    <!-- Nunito font script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Dancing Script  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        /* Form/recruitment portal ex */
+        .form-label-left{
+                width:150px;
+        }
+        .form-line{
+            padding-top:12px;
+            padding-bottom:12px;
+        }
+        .form-label-right{
+            width:150px;
+        }
+        body, html{
+            margin:0;
+            padding:0;
+            background:#fff;
+            font-family: 'Nunito';
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        .ununderline {
+            text-decoration: none;
+        }
+
+        h1,
+        .h1,
+        .highlight {
+            color: #f99908 !important;
+            font-weight: 700 !important;
+            font-family: 'Nunito' !important;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+
+            .now-then{
+                text-align: center;
+            }
+        }
+
+        .myname {
+            font-size: 98px;
+            font-family: 'Dancing Script' !important;
+            font-weight: 900;
+            
+        }
+        
+        @media (max-width:768px) {
+
+            .myname {
+                font-size: 59px;
+            }
+            
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        
+    </style>
+
+    <!-- client logo slider -->
+    <style>
+        /* Slider */
+
+        .slick-slide {
+            margin: 0px 20px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .slick-slider
+        {
+            position: relative;
+            display: block;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+                    user-select: none;
+            -webkit-touch-callout: none;
+            -khtml-user-select: none;
+            -ms-touch-action: pan-y;
+                touch-action: pan-y;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .slick-list
+        {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .slick-list:focus
+        {
+            outline: none;
+        }
+        .slick-list.dragging
+        {
+            cursor: pointer;
+            cursor: hand;
+        }
+
+        .slick-slider .slick-track,
+        .slick-slider .slick-list
+        {
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+                -ms-transform: translate3d(0, 0, 0);
+                -o-transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0);
+        }
+
+        .slick-track
+        {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+        .slick-track:before,
+        .slick-track:after
+        {
+            display: table;
+            content: '';
+        }
+        .slick-track:after
+        {
+            clear: both;
+        }
+        .slick-loading .slick-track
+        {
+            visibility: hidden;
+        }
+
+        .slick-slide
+        {
+            display: none;
+            float: left;
+            height: 100%;
+            min-height: 1px;
+        }
+        [dir='rtl'] .slick-slide
+        {
+            float: right;
+        }
+        .slick-slide img
+        {
+            display: block;
+        }
+        .slick-slide.slick-loading img
+        {
+            display: none;
+        }
+        .slick-slide.dragging img
+        {
+            pointer-events: none;
+        }
+        .slick-initialized .slick-slide
+        {
+            display: block;
+        }
+        .slick-loading .slick-slide
+        {
+            visibility: hidden;
+        }
+        .slick-vertical .slick-slide
+        {
+            display: block;
+            height: auto;
+            border: 1px solid transparent;
+        }
+        .slick-arrow.slick-hidden {
+            display: none;
+        }
+    </style>
+
+
+</head>
+
+<body class="bg-dark">
+
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="highlight">Johan Khanye</h4>
+                        <p class="text-muted" style="font-family: 'merriweather';"><span class="h5">Hello!
+                                W</span>elcome to my portfolio, my name is <strong>Johan Khanye</strong>,
+                            I'm a Data Engineer | Python developer, Born and Educated in a small South Eastern township
+                            of the Johannesburg metropolitan area, <strong>Orange Farm</strong>.
+                        </p>
+
+                        <p class="text-muted">This portfolio is a collection of my work in the Web, Software and data
+                            development game.
+                        </p>
+
+                        <!-- other Pages -->
+                        <h4 class="highlight mt-4" style="text-decoration: underline;">Other Pages</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="./projects.html" class="lead text-muted">My Projects</a></li>
+                            <li><a href="./references.html" class="lead text-muted">References</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- contacts -->
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <!-- heading -->
+                        <h4 class="highlight" style="text-decoration: underline;">Contact </h4>
+                        <!-- link buttons -->
+                        <ul class="list-unstyled my-3 mb-5">
+                            <!-- LinkedIn -->
+                            <li class="my-1">
+                                <p>
+                                    <img class="mx-3" width="25" height="25" src="./images/LinkedIn.png">
+                                    <a class="lead text-muted highlight ununderline"
+                                        href="https://www.linkedin.com/in/johan-khanye/" target="_blank">
+                                        <strong>Johan Khanye</strong>
+                                    </a>
+                                </p>
+                            </li>
+
+                            <!-- WhatsApp -->
+                            <li>
+                                <p>
+                                    <img class="mx-3" width="25" height="25" src="images/WhatsAppLogo.png">
+                                    <a class="lead highlight ununderline" href="https://wa.me/27784308377"
+                                        target="_blank">
+                                        <strong>(+27)78 430 8377</strong></a>
+                                </p>
+                            </li>
+
+                            <!-- Twitter -->
+                            <li>
+                                <p>
+                                    <img class="mx-3" width="25" height="25" src="images/x-logo.webp">
+                                    <a class="lead text-muted highlight ununderline"
+                                        href="https://twitter.com/johan_prodigal" target="_blank">
+                                        <strong>@johan_prodigal</strong></a>
+                                </p>
+                            </li>
+
+                            <!-- Github -->
+                            <li>
+                                <p>
+                                    <img width="25" height="25" src="./images/github.webp" class="mx-3">
+                                    <a class="lead highlight ununderline" href="https://github.com/1-johan"
+                                        target="_blank">
+                                        <strong>Active account</strong>
+                                    </a>
+                                    <sub>
+                                        <a href="https://github.com/Johan-Khanye" target="_blank"
+                                            class="text-white ununderline">(Archive Account <i class="fa fa-external-link" aria-hidden="true"></i>)</a>
+                                    </sub>
+                                </p>
+                            </li>
+
+                            <!-- Email -->
+                            <li>
+                                <p>
+                                    <img width="25" height="25" class="mx-3" src="./images/email.png">
+                                    <a href="mailto:khanyejohan@gmail.com" class="ununderline lead highlight">
+                                        <strong>khanyejohan@gmail.com</strong>
+                                    </a>
+                                </p>
+                            </li>
+
+                            <!-- Stackoverflow -->
+                            <li>
+                                <p>
+                                    <img width="25" height="25" class="mx-3" src="./images/stack.png">
+                                    <a href="https://stackoverflow.com/users/23478342/johan-khanye" target="_blank"
+                                        class="lead ununderline highlight">
+                                        <strong>Johan Khanye</strong>
+                                    </a>
+                                    <sub><a href="https://stackoverflow.com/users/13088402/johan-khanye" target="_blank"
+                                            class="text-white ununderline">(Archive account <i class="fa fa-external-link" aria-hidden="true"></i>)</a>
+                                    </sub>
+                                </p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a href="./index.html" class="navbar-brand d-flex align-items-center">
+                    <img class="mx-2" width="25" height="25" src="images/logo.svg">
+                    <strong>Johan Khanye</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="bg-dark" >
+
+        <!-- cover -->
+        <section class=" text-center container bg-dark" id="cover">
+
+            <div class="bg-dark text-secondary px-2 py-3 text-center">
+
+                <center>
+                    <div class="py-5 row mx-auto" style="max-width: 90%;">
+
+                        <div class="col-lg-4 col-sm-12 mb-5">
+                            <img class="img-fluid col-sm-4 col-md-10" width="100%" style="object-fit: cover;border-radius: 100%;"
+                                src="images/professional-profile.jpeg">
+                        </div>
+
+                        <div class="col-sm-12 col-lg-7 mx-auto my-3 basic">
+                            <h1 class="display-5 fw-bold highlight myname">Johan Khanye
+                            </h1>
+
+                            <div class="h5 highlight row my-3" style="max-width: 100%;">
+                                <p class="lead">· Python Developer · Data Engineer ·</p>
+                                <p class="lead">· Django developer(Frontend/Backend) ·</p>
+                                <p class="lead">· APIs · SQL · NoSql · <span class="text-muted">C++(upskilling)</span></p>
+                            </div>
+
+                            
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <hr />
+                        <p class="highlight my-5" style="font-size: 50px;">7 Years software development XP</p>
+                        <hr />
+
+                        <p class="h4 highlight my-3" style="text-decoration: double underline;">A bit about me:</p>
+
+
+                        <p class="fs-5 mb-1"><img width="20" height="20" src="images/correct.png"> I'm a <a
+                                href=""></a> <span class="highlight"> Pizza Blackhole:</span> I can't help it, if I
+                            see a box, I won't rest until that box has nothing but the pizza saver. </p>
+                        <p class="fs-5 mb-1"><img width="20" height="20" src="images/correct.png"> If I may say so
+                            myself, I'm <span class="highlight">Diligent and strive for continual education</span>:
+                            I could say, I always prefer focusing on functionality before aesthetics. I like
+                            focusing designs around usefulness, efficiency, and user-friendliness, rather than
+                            designs that are simply pleasing to the eye.</p>
+
+                        <p class="fs-5 mb-3"><img width="20" height="20" src="images/correct.png"><span
+                                class="highlight"> Problem Solving problems are my kind of problems:</span>
+                            I really enjoy figuring out problems, solutions appreciated by other individuals bring
+                            me satisfaction and confidence.
+                        </p>
+
+                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                            <a class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold"
+                                href="cv/Mr J Khanye - CV-1.pdf" target="_blank" download>My CV</a>
+                            <a href="#contact-me" class="btn btn-outline-light btn-lg px-4">Contact Me</a>
+                        </div>
+                    </div>
+
+                </center>
+            </div>
+
+        </section>
+
+        <!-- Client logo slider -->
+        <div class="container my-3">
+            <h2 class="text-muted mb-4 text-center" style="text-decoration: underline;">Partners</h2>
+            <section class="customer-logos slider">
+                <div class="slide"><img src="./images/partners/Umuzi.png"></div>
+                <div class="slide"><img src="./images/partners/tih.jpeg"></div>
+                <div class="slide"><img src="./images/partners/jmb.svg"></div>
+                <div class="slide"><img src="./images/partners/csir.jpeg"></div>
+                <div class="slide"><img src="./images/partners/prelude.png"></div>
+                <div class="slide"><img src="./images/partners/beaver.jpg"></div>
+                <div class="slide"><img src="./images/partners/jp.png"></div>
+                
+                
+            </section>
+        </div>
+
+        <!-- segregation -->
+        <center>
+            <div class="text-white col-8 mt-5">
+                <hr />
+            </div>
+        </center>
+
+
+        <!-- projects -->
+        <div class="album py-5 bg-dark">
+            <div class="container">
+                <p class="highlight h1 mb-1" style="text-decoration: double underline;">Top 3 Collaborative projects</p>
+                <p class="lead text-muted mb-4">Below I list my top 3 projects I worked on during my time with different
+                    teams.</p>
+
+                <!-- top 3 projects -->
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+                   
+                    <!-- TIH: Aqueduct -->
+                    <div class="col">  
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="images/TIH.png"
+                                style="object-fit: cover;">
+
+                            <div class="card-body">
+                                <p class="h4 highlight my-4">
+                                    <span class="p-1 px-3" style="font-size: 25px;border: #f99908 5px solid;border-radius: 100%;"
+                                    >1</span>
+                                    <span class="">TIH: Aqueduct</span>
+                                </p> 
+
+                                <p>
+                                    <span class="p-2 badge rounded-pill bg-primary">Internship</span>
+                                    <span class="p-2 badge rounded-pill bg-success">Permanent</span>
+                                </p>
+                                <hr />
+
+                                <strong>Description:</strong>
+                                <p class="card-text">
+                                    Telesure, as a business, tasked the Data Engineering team to develop a storage facility, 
+                                    were <strong>all</strong> operational data could be securely stored, #todo easily accessible by 
+                                    permitted parties and stored in a harmonised manner. The team, came with the <strong>Aqueduct</strong> 
+                                    project, A PySpark Driven service to ingest data from all our business data sources(structured & unstructured). 
+                                    The project ingests around <strong>10~60 million</strong> rows*
+                                    <small>(The size of the columns differ)</small>, per night.
+                                </p>
+
+                                <p>
+                                    <strong>Check it out:</strong> 
+                                    <a class="btn btn-sm btn-danger"><i class="fa fa-times-circle"></i> Confidential
+                                    </a>
+
+                                    <span class="p-2 badge rounded-pill bg-danger" style="font-size: 0.6em;">Repo Access revoked</span>
+                                </p>
+
+
+                                <strong>Notable tools & methodologies used:</strong>
+                                <p class="highlight">
+                                    Python, PySpark, SQL Server, Git, GitHub, SQL, Microsoft Boards, Azure Databricks,  
+                                    Microsoft Suite(Excel, Word, ...), PowerBi, Refactoring, Feature Engineering, IBMI rpgLE,
+                                    PYODBC...
+                                </p>
+
+                                
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                    </div>
+                                    <small>Project Duration: <span class="text-muted">18 months</span></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Umuzi: Recruitment portal -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="images/umuzi.jpg"
+                                style="object-fit: cover;">
+
+                            <div class="card-body">
+                                <p class="h4 highlight my-4">
+                                    <span class="p-1 px-3" style="font-size: 25px;border: #f99908 5px solid;border-radius: 100%;"
+                                    >2</span>
+                                    <span class="">Umuzi: Recruitment portal</span>
+                                </p> 
+                                <p>
+                                    <span class="p-2 badge rounded-pill bg-primary">Learnership</span>
+                                    <span class="p-2 badge rounded-pill bg-primary">Internship</span>
+                                    <span class="p-2 badge rounded-pill bg-primary">Part-time</span>
+                                </p>
+                                <hr />
+
+                                <p class="card-text"><strong>Description:</strong> As both, the Umuzi facilitation and Recruitment team, we were responsible 
+                                    for managing and teaching recruits, alongside recruiting new recruits, as an agency that recruits a new cohort quarterly we 
+                                    had to find a better way to recruit and manage the recruit's assignments, projects and such, we, the Umuzi Python team 
+                                    developed Django web app to 
+                                    <strong>1.</strong> Simplify the business' internal processes RE. Prospective students, students and Investors.
+                                    <strong>2.</strong> Simplify an applicant's application process. 
+                                    <strong>3.</strong> Simplify the recruit's learnership learning and mentoring process. 
+                                    <strong>lastly,</strong> Simplify reapplication in case a prospective recruit fails the selection bootcamp.
+                                </p>
+
+                                <p>
+                                    <strong>Check it out:</strong> 
+                                    <a href="https://www.umuzi.org/apply-now" target="_blank" class="btn btn-success">
+                                        <i class="fa fa-check-circle"></i> See Portal
+                                    </a>
+                                    <span class="p-2 badge rounded-pill bg-danger"><small>Repo Access revoked</small></span>
+
+
+                                </p>
+                                
+                                <strong>Notable tools & methodologies used:</strong>
+                                <p class="highlight">
+                                    Python, Django, unit testing, Git, GitHub, Docker, PostgreSQL, Github APIs,  
+                                    Human Centered design(UX), Github Projects(After trying Trello)...
+                                </p>
+                                
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+
+                                    </div>
+                                    <small>Project Duration: <span class="text-muted" style="font-weight: 600;"> ~11 months</span></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- CSIR: AdvanceIO -->
+                     <div class="col">
+                        <div class="card shadow-sm pt-2">
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="images/csir.jpg"
+                                style="object-fit: cover;">
+
+                            <div class="card-body">
+                                
+                                <p class="h4 highlight my-4">
+                                    <span class="p-1 px-3" style="font-size: 25px;border: #f99908 5px solid;border-radius: 100%;"
+                                    >3</span>
+                                    <span class="">CSIR: Theft Detection model</span>
+                                </p> 
+                                    <span class="p-2 badge rounded-pill bg-primary">Internship</span>
+                                </p>
+                                <hr />
+                                <strong>Description: </strong>
+                                <p class="card-text">
+                                    The AdvanceIO team, myself included, were tasked with finding a way for the eKhurhuleni municipality 
+                                    to use data the have collected through smart electricity meters for years with no clear goal, 
+                                    through the DSIDE programme, as AdvanceIO, we found a way to use the aforementioned data to develop 
+                                    a fraud/theft detection model, to counter theft of electricity.
+                                </p>
+
+                                <p>
+                                    <strong>Check it out:</strong>
+                                    <a class="btn btn-sm btn-danger"><i class="fa fa-times-circle"></i> Confidential</a>
+                                    <span class="p-2 badge rounded-pill bg-danger"><small>Repo Access revoked</small></span>
+                                </p>
+
+                                <strong>Notable tools & methodologies used:</strong>
+                                
+                                <p class="highlight">Python, unit testing, Git, GitHub, Pandas, Seaborn, ScikitLearn, Numpy, 
+                                    Github Projects, Matplotlib, K-clustering... </p>
+                                </center>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                    </div>
+                                    <small>Project Duration: <span class="text-muted">3 months</span></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- more projects button -->
+                <center>
+                    <a href="./projects.html" class=" bg-dark btn btn-primary my-4">More projects</a>
+                </center>
+            </div>
+        </div>
+
+        <!-- segregation -->
+        <center>
+            <div class="text-white col-8">
+                <hr />
+            </div>
+        </center>
+
+        <link href="timeline_style.css" rel="stylesheet">
+        <!-- timeline -->
+        <section class="text-white text-center mb-4 p-3">
+            <p class="highlight h1 mb-4" style="text-decoration: double underline;">My History in a nutshell</p>
+            <p class="lead ">The following is my experience with the game since school. I have only listed my
+                experiences related with employment.</p>
+            <p class="lead"> Although other experiences are not listed below, I have added my non-employment related
+                projects on the <a class="highlight" style="text-decoration: none;" href="./projects.html">projects</a>
+                page</p>
+        </section>
+
+        <h1 class="mt-2 highlight now-then">NOW <i class="fa fa-calendar" aria-hidden="true"></i></h1>
+        <div class="timeline bg-dark" style="font-family: 'merriweather';">
+            <div class="timeline-container left">
+                <div class="content" style="font-family: 'merriweather';">
+                    <h2 class="highlight">2022-23</h2>
+                    <p><strong>Sep 23 - Jan 24</strong>: Resigned: Took a much needed Sabbatical</p>
+                    <p><strong>Jul 23</strong>: Promotion from Jnr. Data Engineer to Data Engineer @ <a
+                            class="highlight" href="https://tihsa.co.za/" target="_blank">TIH(Telesure)</a></p>
+                </div>
+            </div>
+
+            <div class="timeline-container right">
+                <div class="content" style="font-family: 'merriweather';">
+                    <h2 class="highlight">2021-22</h2>
+                    <p><strong>Mar 21</strong>: <strong>Permanently</strong> employed as Jnr. Data Engineer @<a
+                            class="highlight" href="https://tihsa.co.za/" target="_blank">TIH(Telesure)</a></p>
+                </div>
+            </div>
+
+            <div class="timeline-container left">
+                <div class="content" style="font-family: 'merriweather';">
+                    <h2 class="highlight">2020-21</h2>
+                    <hr />
+                    <p><strong>Sep. 20 - Mar.21: Internship</strong>: Data Engineering @<a class="highlight"
+                            href="https://tihsa.co.za/" target="_blank">TIH(Telesure)</a> </p>
+                    <p><strong>Jan. 20 - Sep. 20</strong>: Python and Data Engineering upskilling and facilitation @<a
+                            class="highlight" href="https://umuzi.org" target="_blank">umuzi.org</a> </p>
+                </div>
+            </div>
+
+            <div class="timeline-container right">
+                <div class="content" style="font-family: 'merriweather';">
+                    <h2 class="highlight">2019</h2>
+                    <hr />
+                    <p><strong>Oct. 19 - Dec. 19</strong>: Intern @Prelude Technologies(Ref: <a class="highlight"
+                            href="https://www.linkedin.com/in/sheena-o-connell-0bb72527/" target="_blank">Dir. Sheena
+                            O'Conell</a>)
+                    <p><strong>Feb. 19 - Sep. 19</strong>: Junior Data Scientist & facilitator @<a class="highlight"
+                            href="https://umuzi.org" target="_blank">umuzi.org</a></p>
+                    <p><strong>Dec. 18 - Feb. 19</strong>: <a href="https://www.csir.co.za/" class="highlight"
+                            target="_blank">CSIR</a> DSIDE internship programme, <a target="_blank"
+                            href="https://dsideweb.github.io/about/" class="highlight">More</a></p>
+                </div>
+            </div>
+
+            <div class="timeline-container left">
+                <div class="content">
+                    <h2 class="highlight">2018</h2>
+                    <hr />
+
+                    <p><strong>Mar. 18 - Dec. 18</strong>: Enrolled in an <a href="https://umuzi.org" class="highlight"
+                            target="_blank">Umuzi</a> learnership</p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="content">
+                    <h2 class="highlight">2017</h2>
+                    <hr />
+
+                    <p>Matriculated with APS Score of <strong>27</strong>.</p>
+                </div>
+            </div>
+        </div>
+        <h1 class="mt-2 highlight now-then">THEN <i class="fa fa-history" aria-hidden="true"></i></h1>
+
+        <!-- segregation -->
+        <center>
+            <div class="text-white col-8">
+                <hr />
+            </div>
+        </center>
+
+        <!-- Contact Me Form -->
+        <div class="container my-5 p-3">
+            <div class="text-center my-4">
+                <p class="highlight h2 my-3" style="text-decoration: double underline;">Say Hello</p>
+                <p class="lead highlight">Work Inquiries · Say hello · Say it, whatever it is · Just send it via
+                    the below form.</p>
+                <p class="lead text-secondary">You can also find my contacts in the navigation menu. <span class="small">Go to Nav menu</span> <a href="#top" class="highlight lead" style="font-size: 22px;">[<i class="fa fa-arrow-up"></i>]</a></p>
+            </div>
+
+            <center>
+            <form action="https://formspree.io/f/mjvnryvl" method="POST" id="contact-me" style="width: 80%;">
+                <div class="row">
+                    <!-- fullname -->
+                    <div class="form-group col-md-6">
+                        <label for="nameField" class="small text-white mt-3 mb-1">What's your name</label>
+                        <input type="text" name="fullname" style="border: solid #f99908;" id="nameField"
+                            class="form-control highlight bg-dark text-center p-2" placeholder="Your Name" required>
+                    </div>
+
+                    <!-- email address -->
+                    <div class="form-group col-md-6">
+                        <label for="emailField" class="small text-white mt-3 mb-1">Email Address</label>
+                        <input type="email" name="email-address" style="border: solid #f99908;"
+                            class="form-control highlight bg-dark lead text-center p-2" id="emailField"
+                            placeholder="Your Email address" required>
+                    </div>
+
+                </div>
+
+                <!-- Message -->
+                <label for="messageField" class="text-white mt-3 mb-1 small">Message</label>
+                <textarea name="message" class="form-control bg-dark highlight text-center p-3" placeholder="Message"
+                    style="border: solid #f99908;" id="messageField" rows="6" required></textarea>
+
+                <button type="submit" class="btn btn-dark my-3" style="border: 1px dashed ;width: 250px;">Send · Thumela
+                    · Stuur</button>
+            </form>
+        </center>
+        </div>
+
+    </main>
+
+    <div class="mt-5 footer" style="width: 100%;">
+        <center>
+            <div class="card-body bg-dark" style="width: 100%;">
+                <!-- segregation -->
+                <div class="text-white col-8">
+                    <hr />
+                </div>
+
+                <!-- Developing company's logo and contacts-->
+                <Footer class="container-fluid text-center mt-5" style="width: 100%;">
+                    <!-- Johan Khanye's Logo, #TODO: Update logo. -->
+                    <div class=" text-center w-100">
+                        <a href="#">
+                            <img src="./images/JKD-logo.svg" height="50" width="50">
+                        </a>
+                        <p class="text-muted lead">&copy; Johan Khanye</p>
+                    </div>
+
+                    <!-- Phone number -->
+                    <a class="btn btn-sm btn-outline-light m-1 lead highlight"><i class="fa fa-phone"></i> · (+27)78 430
+                        8377
+                    </a>
+
+                </Footer>
+                </br>
+            </div>
+        </center>
+    </div>
+
+
+    <script src="bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.customer-logos').slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                }, {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }]
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
